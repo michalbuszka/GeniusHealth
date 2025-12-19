@@ -1,1 +1,1 @@
-Aplikacja mobilna łącząca się z urządzeniem przez protokół Modbus RTU za pomocą bluetootha. (Projekt został przeze mnie napisany w 2 klasie liceum w roku 2020).
+Aplikacja mobilna łącząca się z urządzeniem (stymulującym elektrycznie mięśnie i regenerującym tkanki) przez protokół Modbus RTU za pomocą bluetootha. (Projekt został przeze mnie napisany w 2 klasie liceum w roku 2020).
