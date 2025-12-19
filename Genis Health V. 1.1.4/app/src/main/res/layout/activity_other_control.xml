@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".OtherControl">
+    <RelativeLayout style="@style/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/otherControlBackArrow"
+                android:backgroundTint="#151643"
+                style="@style/headerBackArrow"/>
+            <ImageView
+                style="@style/headerIcon"
+                android:src="@drawable/other_mode_icon" />
+            <TextView
+                style="@style/headerTitle"
+                android:text="Other Programs" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/startProgramOther"
+            style="@style/startOrStopAllChannels" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/otherPause1"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/otherAmplitudeMinus1"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/otherAmplitude1"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/otherAmplitudePlus1"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/otherTimeLeft1"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/otherFrequency1"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/otherShowProgram1"
+                        style="@style/showProgramName"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/otherPause2"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/otherAmplitudeMinus2"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/otherAmplitude2"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/otherAmplitudePlus2"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/otherTimeLeft2"
+                        style="@style/timeCounter" />
+                    <TextView
+                        android:id="@+id/otherFrequency2"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/otherShowProgram2"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/otherPause3"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/otherAmplitudeMinus3"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/otherAmplitude3"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/otherAmplitudePlus3"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/otherTimeLeft3"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/otherFrequency3"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/otherShowProgram3"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:layout_marginTop="70dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/otherPause4"
+                            style="@style/pauseChannel" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/otherAmplitudeMinus4"
+                                style="@style/amplitudeMinus" />
+
+                            <TextView
+                                android:id="@+id/otherAmplitude4"
+                                style="@style/showAmplitude" />
+
+                            <Button
+                                android:id="@+id/otherAmplitudePlus4"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/otherTimeLeft4"
+                            style="@style/timeCounter" />
+                        <TextView
+                            android:id="@+id/otherFrequency4"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/otherShowProgram4"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <Button
+                            android:id="@+id/otherPause5"
+                            style="@style/pauseChannel" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/otherAmplitudeMinus5"
+                                style="@style/amplitudeMinus" />
+                            <TextView
+                                android:id="@+id/otherAmplitude5"
+                                style="@style/showAmplitude" />
+                            <Button
+                                android:id="@+id/otherAmplitudePlus5"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/otherTimeLeft5"
+                            style="@style/timeCounter" />
+                        <TextView
+                            android:id="@+id/otherFrequency5"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/otherShowProgram5"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/otherPause6"
+                            style="@style/pauseChannel" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/otherAmplitudeMinus6"
+                                style="@style/amplitudeMinus" />
+                            <TextView
+                                android:id="@+id/otherAmplitude6"
+                                style="@style/showAmplitude" />
+                            <Button
+                                android:id="@+id/otherAmplitudePlus6"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/otherTimeLeft6"
+                            style="@style/timeCounter" />
+                        <TextView
+                            android:id="@+id/otherFrequency6"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/otherShowProgram6"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</LinearLayout>

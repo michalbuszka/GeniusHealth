@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BurstModulatedMode">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/manualBackArrow"
+                    android:backgroundTint="#151643"
+                    style="@style/headerBackArrow"/>
+                <ImageView
+                    style="@style/headerIcon"
+                    android:src="@drawable/manual_mode_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manual Mode"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/nextBurstButton"
+                android:text="Next"
+                android:layout_marginRight="15dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:text="Channel 1"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                        <Switch
+                            android:id="@+id/burstOnOff1"
+                            style="@style/onOffSwitch"/>
+                        <TextView
+                            style="@style/descriptionText"
+                            android:text="Program: "/>
+                        <Spinner
+                            android:id="@+id/burstProgram1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/manualProgramResource"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="Time duration: "/>
+                        <Spinner
+                            android:id="@+id/burstTimeDuration1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/burstTimeDuration"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:text="Channel 2"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                        <Switch
+                            android:id="@+id/burstOnOff2"
+                            style="@style/onOffSwitch"/>/>
+                        <TextView
+                            style="@style/descriptionText"
+                            android:text="Program: "/>
+                        <Spinner
+                            android:id="@+id/burstProgram2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/manualProgramResource"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="Time duration: "/>
+                        <Spinner
+                            android:id="@+id/burstTimeDuration2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/burstTimeDuration"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:text="Channel 3"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                        <Switch
+                            android:id="@+id/burstOnOff3"
+                            style="@style/onOffSwitch"/>
+                        <TextView
+                            android:text="Program: "
+                            style="@style/descriptionText"/>
+                        <Spinner
+                            android:id="@+id/burstProgram3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/manualProgramResource"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="Time duration: "/>
+                        <Spinner
+                            android:id="@+id/burstTimeDuration3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/burstTimeDuration"
+                            />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow android:layout_marginTop="80dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:text="Channel 4"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                        <Switch
+                            android:id="@+id/burstOnOff4"
+                            style="@style/onOffSwitch"/>/>
+                        <TextView
+                            style="@style/descriptionText"
+                            android:text="Program: "/>
+                        <Spinner
+                            android:id="@+id/burstProgram4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/manualProgramResource"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="Time duration: "/>
+                        <Spinner
+                            android:id="@+id/burstTimeDuration4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/burstTimeDuration"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:text="Channel 5"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                        <Switch
+                            android:id="@+id/burstOnOff5"
+                            style="@style/onOffSwitch"/>/>
+                        <TextView
+                            style="@style/descriptionText"
+                            android:text="Program: "/>
+                        <Spinner
+                            android:id="@+id/burstProgram5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/manualProgramResource"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="Time duration: "/>
+                        <Spinner
+                            android:id="@+id/burstTimeDuration5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/burstTimeDuration"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:text="Channel 6"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                        <Switch
+                            android:id="@+id/burstOnOff6"
+                            style="@style/onOffSwitch"/>
+                        <TextView
+                            style="@style/descriptionText"
+                            android:text="Program: "/>
+                        <Spinner
+                            android:id="@+id/burstProgram6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/manualProgramResource"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="Time duration: "/>
+                        <Spinner
+                            android:id="@+id/burstTimeDuration6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/burstTimeDuration"
+                            />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

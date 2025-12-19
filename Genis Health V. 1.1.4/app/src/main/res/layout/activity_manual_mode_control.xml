@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BurstModulatedMode">
+    <RelativeLayout style="@style/header">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/manualControlBackArrow"
+                android:backgroundTint="#151643"
+                style="@style/headerBackArrow"/>
+            <ImageView
+                style="@style/headerIcon"
+                android:src="@drawable/manual_mode_icon" />
+            <TextView
+                style="@style/headerTitle"
+                android:text="Manual Mode" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/startProgramManual"
+            style="@style/startOrStopAllChannels" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/manualPause1"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/manualAmplitudeMinus1"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/manualAmplitude1"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/manualAmplitudePlus1"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <Button android:id="@+id/editChannel1"
+                        style="@style/editChannelButton"/>
+                    <TextView
+                        android:id="@+id/manualTimeLeft1"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/manualFrequency1"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/manualShowProgram1"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/manualPause2"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/manualAmplitudeMinus2"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/manualAmplitude2"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/manualAmplitudePlus2"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <Button android:id="@+id/editChannel2"
+                        style="@style/editChannelButton"/>
+                    <TextView
+                        android:id="@+id/manualTimeLeft2"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/manualFrequency2"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/manualShowProgram2"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/manualPause3"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/manualAmplitudeMinus3"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/manualAmplitude3"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/manualAmplitudePlus3"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <Button android:id="@+id/editChannel3"
+                        style="@style/editChannelButton"/>
+                    <TextView
+                        android:id="@+id/manualTimeLeft3"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/manualFrequency3"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/manualShowProgram3"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/manualPause4"
+                            style="@style/pauseChannel" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/manualAmplitudeMinus4"
+                                style="@style/amplitudeMinus" />
+
+                            <TextView
+                                android:id="@+id/manualAmplitude4"
+                                style="@style/showAmplitude" />
+
+                            <Button
+                                android:id="@+id/manualAmplitudePlus4"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <Button android:id="@+id/editChannel4"
+                            style="@style/editChannelButton"/>
+                        <TextView
+                            android:id="@+id/manualTimeLeft4"
+                            style="@style/timeCounter" />
+
+                        <TextView
+                            android:id="@+id/manualFrequency4"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/manualShowProgram4"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <Button
+                            android:id="@+id/manualPause5"
+                            style="@style/pauseChannel" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/manualAmplitudeMinus5"
+                                style="@style/amplitudeMinus" />
+                            <TextView
+                                android:id="@+id/manualAmplitude5"
+                                style="@style/showAmplitude" />
+                            <Button
+                                android:id="@+id/manualAmplitudePlus5"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <Button android:id="@+id/editChannel5"
+                            style="@style/editChannelButton"/>
+                        <TextView
+                            android:id="@+id/manualTimeLeft5"
+                            style="@style/timeCounter" />
+
+                        <TextView
+                            android:id="@+id/manualFrequency5"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/manualShowProgram5"
+                            style="@style/showProgramName"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/manualPause6"
+                            style="@style/pauseChannel" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/manualAmplitudeMinus6"
+                                style="@style/amplitudeMinus" />
+                            <TextView
+                                android:id="@+id/manualAmplitude6"
+                                style="@style/showAmplitude" />
+                            <Button
+                                android:id="@+id/manualAmplitudePlus6"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <Button android:id="@+id/editChannel6"
+                            style="@style/editChannelButton"/>
+                        <TextView
+                            android:id="@+id/manualTimeLeft6"
+                            style="@style/timeCounter" />
+
+                        <TextView
+                            android:id="@+id/manualFrequency6"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/manualShowProgram6"
+                            style="@style/showProgramName"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</LinearLayout>

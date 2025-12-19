@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="headerBackArrow">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:foreground">@drawable/ic_baseline_arrow_back_24</item>
+    </style>
+    <style name="editChannelDescription">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="editChannelButton">
+        <item name="android:layout_width">77dp</item>
+        <item name="android:layout_height">77dp</item>
+        <item name="android:foreground">@drawable/settings_icon</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:text">Edit Channel</item>
+    </style>
+    <style name="descriptionText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="startOrStopAllChannels">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:foreground">@drawable/play</item>
+    </style>
+    <style name="programSpinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="onOffSwitch">
+        <item name="android:scaleX">1.2</item>
+        <item name="android:scaleY">1.2</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:text">On/Off: </item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="selectIconName">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="selectModeIcon">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="headerTitle">
+            <item name="android:layout_width">wrap_content</item>
+             <item name="android:layout_height">wrap_content</item> wrap_content
+             <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="headerIcon">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+    <style name="header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:background">#151643</item>
+    </style>
+    <style name="timeCounter">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">Time left: -</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="showProgramName">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">Current program: -</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="showFrequency">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">Frequency: -</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="showAmplitude">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">-</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="amplitudePlus">
+        <item name="android:layout_width">77dp</item>
+        <item name="android:layout_height">77dp</item>
+        <item name="android:foreground">@drawable/plus</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="amplitudeMinus">
+        <item name="android:layout_width">77dp</item>
+        <item name="android:layout_height">77dp</item>
+        <item name="android:foreground">@drawable/minus</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="pauseChannel">
+        <item name="android:layout_width">77dp</item>
+        <item name="android:layout_height">77dp</item>
+        <item name="android:foreground">@drawable/play</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+</resources>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BurstModulatedMode">
+    <RelativeLayout style="@style/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/interferentialControlBackArrow"
+                android:backgroundTint="#151643"
+                style="@style/headerBackArrow"/>
+            <ImageView
+                style="@style/headerIcon"
+                android:src="@drawable/interferential_mode_icon" />
+            <TextView
+                style="@style/headerTitle"
+                android:text="Interferential Mode" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/startProgramInterferential"
+            style="@style/startOrStopAllChannels"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <TableRow>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/interferentialPause1"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/interferentialAmplitudeMinus1"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/interferentialAmplitude1"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/interferentialAmplitudePlus1"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/interferentialTimeLeft1"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/interferentialFrequency1"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/interferentialShowProgram1"
+                        style="@style/showProgramName"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/interferentialPause2"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/interferentialAmplitudeMinus2"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/interferentialAmplitude2"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/interferentialAmplitudePlus2"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/interferentialTimeLeft2"
+                        style="@style/timeCounter" />
+                    <TextView
+                        android:id="@+id/interferentialFrequency2"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/interferentialShowProgram2"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/interferentialPause3"
+                        style="@style/pauseChannel" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/interferentialAmplitudeMinus3"
+                            style="@style/amplitudeMinus" />
+                        <TextView
+                            android:id="@+id/interferentialAmplitude3"
+                            style="@style/showAmplitude" />
+                        <Button
+                            android:id="@+id/interferentialAmplitudePlus3"
+                            style="@style/amplitudePlus" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/interferentialTimeLeft3"
+                        style="@style/timeCounter" />
+
+                    <TextView
+                        android:id="@+id/interferentialFrequency3"
+                        style="@style/showFrequency" />
+                    <TextView
+                        android:id="@+id/interferentialShowProgram3"
+                        style="@style/showProgramName"/>
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:layout_marginTop="70dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/interferentialPause4"
+                            style="@style/pauseChannel" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/interferentialAmplitudeMinus4"
+                                style="@style/amplitudeMinus" />
+
+                            <TextView
+                                android:id="@+id/interferentialAmplitude4"
+                                style="@style/showAmplitude" />
+
+                            <Button
+                                android:id="@+id/interferentialAmplitudePlus4"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/interferentialTimeLeft4"
+                            style="@style/timeCounter" />
+                        <TextView
+                            android:id="@+id/interferentialFrequency4"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/interferentialShowProgram4"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <Button
+                            android:id="@+id/interferentialPause5"
+                            style="@style/pauseChannel" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/interferentialAmplitudeMinus5"
+                                style="@style/amplitudeMinus" />
+                            <TextView
+                                android:id="@+id/interferentialAmplitude5"
+                                style="@style/showAmplitude" />
+                            <Button
+                                android:id="@+id/interferentialAmplitudePlus5"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/interferentialTimeLeft5"
+                            style="@style/timeCounter" />
+                        <TextView
+                            android:id="@+id/interferentialFrequency5"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/interferentialShowProgram5"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/interferentialPause6"
+                            style="@style/pauseChannel" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/interferentialAmplitudeMinus6"
+                                style="@style/amplitudeMinus" />
+                            <TextView
+                                android:id="@+id/interferentialAmplitude6"
+                                style="@style/showAmplitude" />
+                            <Button
+                                android:id="@+id/interferentialAmplitudePlus6"
+                                style="@style/amplitudePlus" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/interferentialTimeLeft6"
+                            style="@style/timeCounter" />
+                        <TextView
+                            android:id="@+id/interferentialFrequency6"
+                            style="@style/showFrequency" />
+                        <TextView
+                            android:id="@+id/interferentialShowProgram6"
+                            style="@style/showProgramName"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</LinearLayout>

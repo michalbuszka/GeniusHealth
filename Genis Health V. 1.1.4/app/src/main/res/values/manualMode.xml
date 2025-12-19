@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cycleTime">
+        <item>8 s</item>
+        <item>9 s</item>
+        <item>10 s</item>
+        <item>11 s</item>
+        <item>12 s</item>
+        <item>13 s</item>
+        <item>14 s</item>
+        <item>15 s</item>
+    </string-array>
+    <string-array name="rampFall">
+        <item>0 s</item>
+        <item>0.1 s</item>
+        <item>0.2 s</item>
+        <item>0.3 s</item>
+        <item>0.4 s</item>
+        <item>0.5 s</item>
+        <item>0.6 s</item>
+        <item>0.7 s</item>
+        <item>0.8 s</item>
+        <item>0.9 s</item>
+        <item>1 s</item>
+        <item>1.1 s</item>
+        <item>1.2 s</item>
+        <item>1.3 s</item>
+        <item>1.4 s</item>
+        <item>1.5 s</item>
+        <item>1.6 s</item>
+        <item>1.7 s</item>
+        <item>1.8 s</item>
+        <item>1.9 s</item>
+        <item>2 s</item>
+    </string-array>
+    <string-array name="rampRise">
+        <item>0.1 s</item>
+        <item>0.2 s</item>
+        <item>0.3 s</item>
+        <item>0.4 s</item>
+        <item>0.5 s</item>
+        <item>0.6 s</item>
+        <item>0.7 s</item>
+        <item>0.8 s</item>
+        <item>0.9 s</item>
+        <item>1 s</item>
+        <item>1.1 s</item>
+        <item>1.2 s</item>
+        <item>1.3 s</item>
+        <item>1.4 s</item>
+        <item>1.5 s</item>
+        <item>1.6 s</item>
+        <item>1.7 s</item>
+        <item>1.8 s</item>
+        <item>1.9 s</item>
+        <item>2 s</item>
+    </string-array>
+    <string-array name="pulse">
+        <item>0 μ</item>
+        <item>8 μ</item>
+        <item>16 μ</item>
+        <item>24 μ</item>
+        <item>32 μ</item>
+        <item>40 μ</item>
+        <item>48 μ</item>
+        <item>56 μ</item>
+        <item>64 μ</item>
+        <item>72 μ</item>
+        <item>80 μ</item>
+        <item>88 μ</item>
+        <item>96 μ</item>
+        <item>104 μ</item>
+        <item>112 μ</item>
+        <item>120 μ</item>
+        <item>128 μ</item>
+        <item>136 μ</item>
+        <item>144 μ</item>
+        <item>152 μ</item>
+        <item>160 μ</item>
+        <item>168 μ</item>
+        <item>176 μ</item>
+        <item>184 μ</item>
+        <item>192 μ</item>
+        <item>200 μ</item>
+        <item>208 μ</item>
+        <item>216 μ</item>
+        <item>224 μ</item>
+        <item>232 μ</item>
+        <item>240 μ</item>
+        <item>248 μ</item>
+        <item>256 μ</item>
+        <item>264 μ</item>
+        <item>272 μ</item>
+        <item>280 μ</item>
+        <item>288 μ</item>
+        <item>296 μ</item>
+        <item>304 μ</item>
+        <item>312 μ</item>
+        <item>320 μ</item>
+        <item>328 μ</item>
+        <item>336 μ</item>
+        <item>344 μ</item>
+        <item>352 μ</item>
+        <item>360 μ</item>
+        <item>368 μ</item>
+        <item>376 μ</item>
+        <item>384 μ</item>
+        <item>392 μ</item>
+        <item>400 μ</item>
+    </string-array>
+    <string-array name="duty">
+        <item>0%</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+        <item>35%</item>
+        <item>40%</item>
+        <item>45%</item>
+        <item>50%</item>
+        <item>55%</item>
+        <item>60%</item>
+        <item>65%</item>
+        <item>70%</item>
+        <item>75%</item>
+        <item>80%</item>
+        <item>85%</item>
+        <item>90%</item>
+        <item>95%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="delay">
+        <item>0 s</item>
+        <item>0.2 s</item>
+        <item>0.4 s</item>
+        <item>0.6 s</item>
+        <item>0.8 s</item>
+        <item>1s</item>
+        <item>1.2 s</item>
+        <item>1.4 s</item>
+        <item>1.6 s</item>
+        <item>1.8 s</item>
+        <item>2 s</item>
+    </string-array>
+    <string-array name="manualProgramResource">
+        <item>Long pulse</item>
+        <item>Short pulse</item>
+        <item>Burst modulated (Russian)</item>
+        <item>Pelvic</item>
+        <item>Tibal</item>
+        <item>Cranal</item>
+    </string-array>
+    <integer-array name="manualLongPulseTo20">
+        <item>1</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>16</item>
+        <item>4</item>
+        <item>50</item>
+        <item>1000</item>
+        <item>1800</item>
+        <item>0</item>
+        <item>0</item>
+        <item>100</item>
+        <item>50</item>
+        <item>2500</item>
+        <item>512</item>
+        <item>42</item>
+        <item>6656</item>
+        <item>1500</item>
+        <item>500</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>1</item>
+        <item>100</item>
+    </integer-array>
+    <integer-array name="manualShortPulseTo20">
+        <item>1</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>16</item>
+        <item>4</item>
+        <item>50</item>
+        <item>1000</item>
+        <item>1800</item>
+        <item>0</item>
+        <item>0</item>
+        <item>100</item>
+        <item>50</item>
+        <item>2500</item>
+        <item>512</item>
+        <item>42</item>
+        <item>6656</item>
+        <item>1500</item>
+        <item>500</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>2</item>
+        <item>100</item>
+    </integer-array>
+    <integer-array name="manualRussianTo20">
+        <item>1</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>16</item>
+        <item>4</item>
+        <item>50</item>
+        <item>1000</item>
+        <item>1800</item>
+        <item>0</item>
+        <item>0</item>
+        <item>100</item>
+        <item>50</item>
+        <item>2500</item>
+        <item>512</item>
+        <item>42</item>
+        <item>6656</item>
+        <item>1500</item>
+        <item>500</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>3</item>
+        <item>100</item>
+    </integer-array>
+    <integer-array name="manualPelvicTo20">
+        <item>1</item>
+        <item>180</item>
+        <item>1200</item>
+        <item>16</item>
+        <item>0</item>
+        <item>10</item>
+        <item>100</item>
+        <item>0</item>
+        <item>0</item>
+        <item>2400</item>
+        <item>100</item>
+        <item>10</item>
+        <item>2500</item>
+        <item>307</item>
+        <item>31</item>
+        <item>6144</item>
+        <item>2000</item>
+        <item>0</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>2</item>
+        <item>100</item>
+    </integer-array>
+    <integer-array name="manualPelvicForm40">
+        <item>4</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>4</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>178</item>
+        <item>17</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>178</item>
+        <item>16</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>178</item>
+        <item>15</item>
+        <item>0</item>
+        <item>6144</item>
+        <item>180</item>
+        <item>11</item>
+        <item>0</item>
+        <item>20</item>
+        <item>184</item>
+        <item>17</item>
+        <item>0</item>
+        <item>0</item>
+        <item>184</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>184</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>356</item>
+        <item>17</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>356</item>
+        <item>16</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>356</item>
+        <item>15</item>
+        <item>0</item>
+        <item>6144</item>
+        <item>360</item>
+        <item>11</item>
+        <item>0</item>
+        <item>30</item>
+        <item>364</item>
+        <item>17</item>
+        <item>0</item>
+        <item>0</item>
+        <item>364</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>364</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>538</item>
+        <item>17</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>538</item>
+        <item>16</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>538</item>
+        <item>15</item>
+        <item>0</item>
+        <item>6144</item>
+        <item>540</item>
+        <item>11</item>
+        <item>0</item>
+        <item>40</item>
+        <item>544</item>
+        <item>17</item>
+        <item>0</item>
+        <item>0</item>
+        <item>544</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>544</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>1738</item>
+        <item>17</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>1738</item>
+        <item>16</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>1738</item>
+        <item>15</item>
+        <item>0</item>
+        <item>6144</item>
+        <item>1740</item>
+        <item>11</item>
+        <item>0</item>
+        <item>50</item>
+        <item>1744</item>
+        <item>17</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1744</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1744</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>2038</item>
+        <item>17</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>2038</item>
+        <item>16</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>2038</item>
+        <item>15</item>
+        <item>0</item>
+        <item>6144</item>
+        <item>2040</item>
+        <item>11</item>
+        <item>0</item>
+        <item>60</item>
+        <item>2044</item>
+        <item>17</item>
+        <item>0</item>
+        <item>0</item>
+        <item>2044</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>2044</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>2218</item>
+        <item>17</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>2218</item>
+        <item>16</item>
+        <item>0</item>
+        <item>2000</item>
+        <item>2218</item>
+        <item>15</item>
+        <item>0</item>
+        <item>6144</item>
+        <item>2220</item>
+        <item>11</item>
+        <item>0</item>
+        <item>100</item>
+        <item>2224</item>
+        <item>17</item>
+        <item>0</item>
+        <item>0</item>
+        <item>2224</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>2224</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+    </integer-array>
+    <integer-array name="manualTibalTo20">
+        <item>1</item>
+        <item>0</item>
+        <item>1200</item>
+        <item>16</item>
+        <item>0</item>
+        <item>20</item>
+        <item>20</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1800</item>
+        <item>100</item>
+        <item>20</item>
+        <item>2500</item>
+        <item>307</item>
+        <item>25</item>
+        <item>6144</item>
+        <item>2000</item>
+        <item>0</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>2</item>
+        <item>100</item>
+    </integer-array>
+    <integer-array name="manualTibalFrom40">
+        <item>4</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>4</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+    </integer-array>
+    <integer-array name="manualCranalTo20">
+        <item>1</item>
+        <item>0</item>
+        <item>1200</item>
+        <item>16</item>
+        <item>0</item>
+        <item>60</item>
+        <item>60</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1200</item>
+        <item>100</item>
+        <item>60</item>
+        <item>2500</item>
+        <item>307</item>
+        <item>31</item>
+        <item>6144</item>
+        <item>2000</item>
+        <item>0</item>
+        <item>0</item>
+        <item>10240</item>
+        <item>2</item>
+        <item>14</item>
+    </integer-array>
+    <integer-array name="manualCranalFrom40">
+        <item>4</item>
+        <item>16</item>
+        <item>0</item>
+        <item>0</item>
+        <item>4</item>
+        <item>15</item>
+        <item>0</item>
+        <item>10240</item>
+    </integer-array>
+</resources>

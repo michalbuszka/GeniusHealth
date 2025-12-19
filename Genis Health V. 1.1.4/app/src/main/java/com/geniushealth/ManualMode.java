@@ -1,0 +1,251 @@
+package com.geniushealth;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.Toast;
+
+public class ManualMode extends AppCompatActivity {
+    protected Xionis xionis;
+    protected BluetoothConnection bluetoothConnection;
+    protected Xionis.DeviceParameters[] deviceParameters = new Xionis.DeviceParameters[6];
+    protected Spinner[] timeDuration = new Spinner[6];
+    protected Spinner[] programSpinner = new Spinner[6];
+    protected boolean[] deviceOnOff = new boolean[6];
+    protected Switch[] startSwitch = new Switch[6];
+    protected int[] rewriteProgramArray ()
+    {
+        int[] programNumber = new int[6];
+        for (int i = 0; i < 6; i++)
+        {
+            programNumber[i] = deviceParameters[i].programNumber;
+        }
+        return programNumber;
+    }
+    protected void disableInputs ()
+    {
+        findViewById(R.id.nextBurstButton).setEnabled(false);
+        for (int i = 0; i < 6; i++)
+        {
+            timeDuration[i].setEnabled(false);
+            timeDuration[i].setEnabled(false);
+            startSwitch[i].setEnabled(false);
+            programSpinner[i].setEnabled(false);
+        }
+    }
+    protected void sendProgramRegisters (int index, int[] programTo20, int[] programFrom40)
+    {
+        byte[] RegistersTo20 = Xionis.prepareWriteManyRegistersFrame(0x50 + index, 0, programTo20);
+        if (programFrom40 == null)
+        {
+            xionis.xionisDevice[index].setRegisters(RegistersTo20);
+        }
+        else if (programFrom40.length > 100)
+        {
+            int[] Pack1Int = new int[100];
+            for (int i = 0; i < 100; i++)
+            {
+                Pack1Int[i] = programFrom40[i];
+            }
+            int[] burstPack2Int = new int[programFrom40.length - 100];
+            for (int i = 100; i < programFrom40.length; i++)
+            {
+                burstPack2Int[i - 100] = programFrom40[i];
+            }
+            byte[] otherBurstModulated1kHzPack1 = Xionis.prepareWriteManyRegistersFrame(0x50 + index, 40, Pack1Int);
+            byte[] otherBurstModulated1kHzPack2 = Xionis.prepareWriteManyRegistersFrame(0x50 + index, 140, burstPack2Int);
+            xionis.xionisDevice[index].setRegisters(RegistersTo20);
+            xionis.xionisDevice[index].setRegisters(otherBurstModulated1kHzPack1);
+            xionis.xionisDevice[index].setRegisters(otherBurstModulated1kHzPack2);
+        }
+        else if (programFrom40.length < 100)
+        {
+            byte[] otherBurstModulated1kHzPack1 = Xionis.prepareWriteManyRegistersFrame(0x50 + index, 40, programFrom40);
+            xionis.xionisDevice[index].setRegisters(RegistersTo20);
+            xionis.xionisDevice[index].setRegisters(otherBurstModulated1kHzPack1);
+        }
+    }
+    protected void setupProgramSpinners (Spinner program, int num)
+    {
+        program.setSelection(0, false);
+        program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                deviceParameters[num].programNumber = program.getSelectedItemPosition();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+    protected int amountOfOnDevices()
+    {
+        int counter = 0;
+        for (int i = 0; i < 6; i++)
+        {
+            if (deviceOnOff[i])
+                counter++;
+        }
+        return counter;
+    }
+    protected void setupTimeSpinners (Spinner time, int num)
+    {
+        time.setSelection(0, false);
+        time.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (time.getSelectedItemPosition() == 0)
+                {
+                    deviceParameters[num].timeDuration = 3000;
+                }
+                else
+                {
+                    deviceParameters[num].timeDuration = time.getSelectedItemPosition() * 300;
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+    protected void setupStartInputs (Switch onOff, int num)
+    {
+        onOff.setChecked(true);
+        onOff.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (onOff.isChecked())
+            {
+                deviceOnOff[num] = true;
+            }
+            else {
+                deviceOnOff[num] = false;
+            }
+        });
+    }
+    protected void setProgram (int index, int programNum)
+    {
+        switch (programNum)
+        {
+            case 0:
+                sendProgramRegisters(index, getResources().getIntArray(R.array.manualLongPulseTo20), null);
+                break;
+            case 1:
+                sendProgramRegisters(index, getResources().getIntArray(R.array.manualShortPulseTo20), null);
+                break;
+            case 2:
+                sendProgramRegisters(index, getResources().getIntArray(R.array.manualRussianTo20), null);
+                break;
+            case 3:
+                sendProgramRegisters(index, getResources().getIntArray(R.array.manualPelvicTo20),  getResources().getIntArray(R.array.manualPelvicForm40));
+                break;
+            case 4:
+                sendProgramRegisters(index, getResources().getIntArray(R.array.manualTibalTo20),  getResources().getIntArray(R.array.manualTibalFrom40));
+                break;
+            case 5:
+                sendProgramRegisters(index, getResources().getIntArray(R.array.manualCranalTo20),  getResources().getIntArray(R.array.manualCranalFrom40));
+                break;
+        }
+    }
+    protected synchronized void setupInputs ()
+    {
+        programSpinner[0] = findViewById(R.id.burstProgram1);
+        programSpinner[1] = findViewById(R.id.burstProgram2);
+        programSpinner[2] = findViewById(R.id.burstProgram3);
+        programSpinner[3] = findViewById(R.id.burstProgram4);
+        programSpinner[4] = findViewById(R.id.burstProgram5);
+        programSpinner[5] = findViewById(R.id.burstProgram6);
+        startSwitch[0] = findViewById(R.id.burstOnOff1);
+        startSwitch[1] = findViewById(R.id.burstOnOff2);
+        startSwitch[2] = findViewById(R.id.burstOnOff3);
+        startSwitch[3] = findViewById(R.id.burstOnOff4);
+        startSwitch[4] = findViewById(R.id.burstOnOff5);
+        startSwitch[5] = findViewById(R.id.burstOnOff6);
+        timeDuration[0] = findViewById(R.id.burstTimeDuration1);
+        timeDuration[1] = findViewById(R.id.burstTimeDuration2);
+        timeDuration[2] = findViewById(R.id.burstTimeDuration3);
+        timeDuration[3] = findViewById(R.id.burstTimeDuration4);
+        timeDuration[4] = findViewById(R.id.burstTimeDuration5);
+        timeDuration[5] = findViewById(R.id.burstTimeDuration6);
+        for (int i = 0; i < 6; i++)
+        {
+            deviceOnOff[i] = true;
+            deviceParameters[i] = new Xionis.DeviceParameters();
+            setupStartInputs(startSwitch[i] , i);
+            setupProgramSpinners(programSpinner[i], i);
+            setupTimeSpinners(timeDuration[i], i);
+        }
+        findViewById(R.id.nextBurstButton).setOnClickListener(v -> {
+            if (amountOfOnDevices() > 0)
+            {
+                disableInputs();
+                ProgressDialog progress = new ProgressDialog(ManualMode.this);
+                progress.setTitle(Messages.EN.loadMessage);
+                progress.setCancelable(false);
+                progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                progress.setMax(100);
+                progress.show();
+                int maxDevices = amountOfOnDevices();
+                Thread sender = new Thread ()
+                {
+                    public synchronized  void run ()
+                    {
+                        for (int i = 0; i < 6; i++)
+                        {
+                            if (deviceOnOff[i])
+                            {
+                                setProgram(i, deviceParameters[i].programNumber);
+                                xionis.xionisDevice[i].setRegister(Xionis.Address.programTime, deviceParameters[i].timeDuration);
+                                xionis.xionisDevice[i].setRegister(Xionis.Address.timer, 0);
+                            }
+                            else
+                            {
+                                xionis.xionisDevice[i].setRegister(Xionis.Address.programTime, 0);
+                            }
+                            progress.incrementProgressBy(100/maxDevices);
+                        }
+                        progress.dismiss();
+                        Intent manualControl = new Intent();
+                        manualControl.setClass(ManualMode.this, ManualModeControl.class);
+                        manualControl.putExtra("deviceOnOff", deviceOnOff);
+                        manualControl.putExtra("programNumber", rewriteProgramArray());
+                        manualControl.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(manualControl);
+                        finish();
+                    }
+                };
+                sender.start();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), Messages.EN.noChannelsSelected, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        xionis = new Xionis(this);
+        setContentView(R.layout.activity_manual_mode);
+        bluetoothConnection = (BluetoothConnection)getApplicationContext();
+        xionis.createDevices(bluetoothConnection);
+        setupInputs();
+        findViewById(R.id.manualBackArrow).setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(ManualMode.this, ModeSelection.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+        });
+    }
+}

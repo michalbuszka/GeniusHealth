@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geniushealth">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.geniushealth.BluetoothConnection"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_xionis"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_xionis"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Xionis">
+        <activity android:name="com.geniushealth.InterferentialModeControl" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name="com.geniushealth.InterferentialMode" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.OtherControl" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.OtherMode" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.ManualModeControl" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.ManualMode" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.Lock" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.geniushealth.BurstModulatedControl" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.ModeSelection" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.geniushealth.BurstModulatedMode" android:configChanges="keyboardHidden|orientation" />
+    </application>
+
+</manifest>
